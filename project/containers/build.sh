@@ -18,25 +18,24 @@ METRICS_DIR="//shared/metrics"
 
 docker build \
   --build-arg shared_workspace="//shared" \
-  -f cluster-base.Dockerfile \
-  -t cluster-base .
+  -f spark/cluster-base.Dockerfile \
+  -t cluster-base ./spark
 
 docker build \
   --build-arg spark_version="${SPARK_VERSION}" \
   --build-arg jupyterlab_version="${JUPYTERLAB_VERSION}" \
   --build-arg gcs_bucket="${GCS_BUCKET}" \
-  -f jupyterlab.Dockerfile \
-  -t jupyterlab .
+  -t spark ./spark
 
 docker build \
    --build-arg repo_url="${REPO_URL}" \
    --build-arg snapshots_dir="${SNAPSHOTS_DIR}" \
    --build-arg repo_dir="${REPO_DIR}" \
    --build-arg jupyterlab_version="${JUPYTERLAB_VERSION}" \
-   -f repo-base.Dockerfile \
-   -t repo ./repo
+   -f repo/repo-base.Dockerfile \
+   -t repo-base ./repo
 
-docker build \   
+docker build \
    -t repo ./repo
 
 docker build \

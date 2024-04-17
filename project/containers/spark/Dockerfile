@@ -1,6 +1,6 @@
 FROM cluster-base
 
-# -- Layer: JupyterLab
+# -- Layer: spark
 
 ARG spark_version=3.3.1
 ARG jupyterlab_version=3.6.1

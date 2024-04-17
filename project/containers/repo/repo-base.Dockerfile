@@ -22,8 +22,6 @@ RUN apt-get update -y && \
     apt-get install -y git && \
     pip3 install wget jupyterlab==${jupyterlab_version}
 
-RUN mkdir -p ${snapshots_dir}
-
 # Copy Python scripts to the container
 COPY scripts /app/scripts
 

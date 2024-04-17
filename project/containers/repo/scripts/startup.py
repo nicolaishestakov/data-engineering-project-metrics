@@ -42,6 +42,7 @@ def main(params):
 
     print (f'Out dir: {dir}')
 
+    os.makedirs(dir, exist_ok=True)
     df.to_csv(os.path.join(dir, 'commit_history.csv'))
 
     rs.make_snapshot(

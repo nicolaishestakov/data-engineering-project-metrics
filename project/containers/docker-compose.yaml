@@ -16,9 +16,9 @@ services:
     volumes:
       - shared_volume:/shared
 
-  jupyterlab:
-    image: jupyterlab
-    container_name: jupyterlab
+  spark:
+    image: spark
+    container_name: spark
     ports:
       - 8888:8888
     volumes:

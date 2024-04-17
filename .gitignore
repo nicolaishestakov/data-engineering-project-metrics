@@ -166,4 +166,5 @@ cython_debug/
 # vscode
 .vscode/
 
-keys/
+gcp-spark-key.json
+creds.json
