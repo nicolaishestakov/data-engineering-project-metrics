@@ -34,3 +34,16 @@ Google Cloud
 
 Kafka
   - (TODO) Sending commands to the components of the system
+
+# Architecture
+
+(if you may call it so)
+
+TODO
+
+## Dataflow
+
+Source repo -> source code versions -> code metrics calculated -> metrics data in .csv -> metrics data in .parquet on cloud -> metrics data in BigQuery table -> Analytics and visualization
+
+# Project setup and running
+Read the instruction in [setup.md](setup.md)
